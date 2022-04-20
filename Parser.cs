@@ -14,6 +14,7 @@ public static class Parser
     }
 
     // for debugging lol
+    /*
     public static void PrintTerms(List<string> terms)
     {
         int length = terms.Count;
@@ -23,6 +24,7 @@ public static class Parser
         }
         Console.WriteLine();
     }
+    */
 
     // for debugging lol
     /*
@@ -250,29 +252,29 @@ public static class Parser
     public static List<string> ParseToTerms(string s, string x, string y, string z)
     {
         s = RemoveWhitespace(s);
-        Console.Write("Remove whitespace: ");
-        Console.WriteLine(s);
+        //Console.Write("Remove whitespace: ");
+        //Console.WriteLine(s);
 
         List<string> terms;
         terms = StringToTerms(s);
-        Console.Write("String to terms: ");
-        PrintTerms(terms);
+        //Console.Write("String to terms: ");
+        //PrintTerms(terms);
 
         terms = AddMultToTerms(terms);
-        Console.Write("Add mult to terms: ");
-        PrintTerms(terms);
+        //Console.Write("Add mult to terms: ");
+        //PrintTerms(terms);
 
         ReplaceVarsAndConsts(terms, x, y, z);
-        Console.Write("Replace vars/consts: ");
-        PrintTerms(terms);
+        //Console.Write("Replace vars/consts: ");
+        //PrintTerms(terms);
 
         terms = FixNegatives(terms);
-        Console.Write("Fix negatives: ");
-        PrintTerms(terms);
+        //Console.Write("Fix negatives: ");
+        //PrintTerms(terms);
 
         terms = InfixToPostfix(terms);
-        Console.Write("Postfix notation: ");
-        PrintTerms(terms);
+        //Console.Write("Postfix notation: ");
+        //PrintTerms(terms);
 
         return terms;
     }
